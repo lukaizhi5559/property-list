@@ -82,6 +82,12 @@
   color: white;
 }
 
+.noResults {
+  font-size: 1.2rem;
+  color: #999;
+  margin-top: 20px;
+}
+
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 2732px) 
@@ -116,6 +122,7 @@
 }
 
 /* Overlay Details */
+/* This is a css style I was playing with that overlays the property Image */
 /* .property {
   margin: 20px auto;
   background-color: var(--color-white);
