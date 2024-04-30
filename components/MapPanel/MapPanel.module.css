@@ -1,0 +1,71 @@
+.property {
+  padding: var(--padding-standard);
+}
+
+.property .photoImg {
+  display: block;
+  margin: auto;
+  max-width: 200px;
+  height: 100%;
+  border-radius: var(--border-radius-standard);
+}
+
+.property .details {
+  line-height: 1.2;
+  padding: 0 var(--padding-standard);
+}
+
+.property .details h2 {
+  font-size: var(--font-size-medium);
+  margin: var(--margin-standard) 0;
+}
+
+.property .details p {
+  font-size: var(--font-size-small);
+  margin: var(--margin-standard) 0;
+}
+
+.details h2, .details p:first-of-type {
+  font-weight: bold;
+}
+
+.details :is(:last-child) {
+  color: var(--color-gray);
+}
+
+.favoriteButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.favoriteButton:hover {
+  color: red; /* Change color on hover */
+}
+
+.favoriteButton img[src$="/heart-stroke.svg"]:hover {
+  content: url('/heart-stroke-red.svg'); /* Change image source on hover only if heart-stroke.svg is present */
+}
+
+.favoriteButton img {
+  width: 35px;
+  height: 35px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}

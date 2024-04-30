@@ -1,0 +1,128 @@
+.container { 
+  position: relative;
+  overflow: visible; 
+  height: auto;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.mapToggleButton {
+  display: none;
+}
+
+.toggleButton {
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-index-high);
+}
+
+.toggleButton button {
+  border: none;
+  border-radius: var(--border-radius-standard);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: var(--padding-standard) var(--padding-large);
+}
+
+.webView {
+  display: none;
+}
+
+.mobileView {
+  display: flex;
+  justify-content: center;
+}
+
+.mapPanel, .propertyList {
+  width: 100%;
+}
+
+@media only screen and (orientation: landscape) {
+  .propertyListWrapper {
+    position: relative;
+    display: grid;
+    min-width: 50%;
+    max-height: calc(100vh - 60px);
+    padding: 20px;
+    grid-template-columns: 50% 50%;
+    overflow-y: auto;
+  }
+}
+
+/* Allow two column property list for ipad devices */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .propertyListWrapper {
+      display: grid;
+      min-width: 50%;
+      max-height: calc(100vh - 60px);
+      padding: 20px;
+      grid-template-columns: 50% 50%;
+      overflow-y: auto;
+    }
+}
+
+/* Web browser styles */
+@media only screen and (orientation: landscape) 
+                   and ((min-device-width: 845px) 
+                   and (max-device-width: 1024px) 
+                   and (-webkit-min-device-pixel-ratio: 1.5)), 
+       only screen and (min-width: 1025px) {
+  .container {
+    display: block;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .mapToggleButton {
+    position: sticky;
+    align-self: center;
+    top: 0px;  /* Adjust as needed for alignment with the header or content */
+    left: 10px; /* Positioned from the left side of the container */
+    width: 30px;  /* Width set to 30px for a square appearance */
+    height: 30px; /* Height set to 30px to match the width */
+    background-color: #ccc; /* Gray background similar to a standard hamburger icon */
+    color: white;
+    text-align: center;
+    line-height: 30px; /* Align text vertically */
+    border: none;  /* Remove border if any */
+    border-radius: 5px; /* Slight rounding of corners */
+    cursor: pointer;
+    z-index: 10; /* Ensure it floats above other elements */
+    display: flex;  /* Using flex to center the content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 16px; /* Adjust font size if needed */
+  }
+
+  .toggleButton {
+    display: none;
+  }
+
+  .webView {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mobileView {
+    display: none;
+  }
+
+  .propertyListWrapper {
+    display: grid;
+    min-width: 50%;
+    max-height: calc(100vh - 60px);
+    padding: 20px;
+    grid-template-columns: 50% 50%;
+    overflow-y: auto;
+  }
+}

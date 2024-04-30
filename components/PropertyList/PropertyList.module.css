@@ -1,0 +1,160 @@
+/* Mobile-only styles */
+.map-panel {
+  display: none; /* Hide map panel on screens wider than 768px */
+}
+
+.property {
+  background-color: var(--color-white);
+  margin: var(--margin-standard) 0;
+  cursor: pointer;
+}
+
+.imageContainer {
+  position: relative;
+  padding: 0 var(--padding-large);
+  min-width: 200px;
+  min-height: 250px;
+}
+
+.imageContainer > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-standard);
+}
+
+.imageContainer > img.imgOverride {
+  max-height: 300px;
+}
+
+.favoriteButton {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.favoriteButton img[src$="/heart-stroke.svg"]:hover {
+  content: url('/heart-stroke-red.svg'); /* Change image source on hover only if heart-stroke.svg is present */
+}
+
+.favoriteButton img {
+  width: 35px;
+  height: 35px;
+}
+
+.details {
+  padding: 0 var(--padding-small);
+  line-height: 1.2;
+}
+
+.details h2 {
+  font-size: var(--font-size-large);
+  margin: var(--margin-medium) 0;
+}
+
+.details p {
+  font-size: var(--font-size-small);
+  margin: var(--margin-standard) 0;
+}
+
+.details h2, .details p:first-child {
+  font-weight: bolder;
+}
+
+.details :is(:last-child) {
+  color: var(--color-gray);
+}
+
+.propertyListWrapper {
+  /* Your existing styles for the property list wrapper */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.highlighted {
+  background-color: var(--color-blood-red); /* Change to whatever highlight color you prefer */
+  border-radius: 8px; /* Rounded borders */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+
+.highlighted .details {
+  color: white;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 2732px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .imageContainer {
+      position: relative;
+      padding: var(--padding-large);
+      padding-bottom: 0;
+  }
+
+  .imageContainer > img {
+    min-height: 200px;
+  }
+
+  .favoriteButton {
+    top: 30px;
+  }
+
+  .details {
+    margin: var(--margin-medium);
+  }
+}
+
+/* Web browser styles */
+@media only screen and (orientation: landscape) and ((min-device-width: 845px) 
+  and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5)), 
+  only screen and (min-width: 1025px) {
+  .imageContainer > img {
+    min-height: 250px;
+  }
+}
+
+/* Overlay Details */
+/* .property {
+  margin: 20px auto;
+  background-color: var(--color-white);
+  margin: auto; 
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-white);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 0 0 var(--border-radius-standard) var(--border-radius-standard);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 20px;
+  line-height: 0.7;
+}
+
+.details h2, .details p {
+  margin: 5px 0;
+  color: white;
+}
+
+.details h2, .details p:first-child {
+  font-weight: bolder;
+}
+
+.details :is(:last-child) {
+  color: white;
+} */

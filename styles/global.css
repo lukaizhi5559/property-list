@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+:root {
+  --font-family-sans: "Open Sans", sans-serif;
+  --font-family-monospace: "source-code-pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+  --font-smoothing-webkit: antialiased;
+  --font-smoothing-moz: grayscale;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #777777;
+  --color-background-header: #373342;
+  --color-primary: #CE87C1;
+  --color-blood-red: #880808;
+
+  --padding-small: 5px;
+  --padding-standard: 10px;
+  --padding-large: 20px;
+
+  --margin-standard: 5px;
+  --margin-medium: 10px;
+  --margin-large: 20px;
+
+  --border-radius-standard: 8px;
+
+  --font-size-small: 12px;
+  --font-size-medium: 18px;
+  --font-size-large: 22px;
+
+  --z-index-high: 1;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: var(--font-smoothing-webkit);
+  -moz-osx-font-smoothing: var(--font-smoothing-moz);
+}
+
+code {
+  font-family: var(--font-family-monospace);
+}
+
+/* Google Map Panel specific styles */
+.gm-ui-hover-effect {
+  display: none !important;
+}
+
+.gm-style .gm-style-iw-c {
+  padding: 0;
+}
+
+.gm-style-iw, .gm-style-iw-c {
+  padding-top: 0 !important;
+}
+
+.gm-style-iw-d {
+  overflow: auto !important;
+}
+
+/* Hides on small devices in landscape mode or larger screens */
+@media only screen and (max-width: 768px) and (orientation: landscape),
+       only screen and (min-width: 1025px) {
+  .gm-bundled-control.gm-bundled-control-on-bottom {
+    display: none;
+  }
+}

@@ -1,0 +1,20 @@
+.header {
+  position: sticky;
+  display: flex;
+  top: 0;
+  background-color: var(--color-background-header);
+  color: var(--color-white);
+  padding: var(--padding-standard);
+  text-align: left;
+  z-index: var(--z-index-high);
+}
+
+.header h3 {
+  flex: 1;
+}
+
+.propertyListLabel {
+  text-align: left;
+  text-decoration: none;
+  color: var(--color-white);
+}
