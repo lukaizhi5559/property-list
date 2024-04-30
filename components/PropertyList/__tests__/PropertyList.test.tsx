@@ -89,5 +89,21 @@ describe('PropertyList component', () => {
     expect(mockSetSelectedProperty).toHaveBeenCalledWith(mockProperty);
     expect(mockScrollToProperty).toHaveBeenCalledWith(mockProperty.mlsId);
   });
-  
+
+  it('renders "No results found" message when no properties are provided', () => {
+    const mockProps = {
+      properties: [],
+      favorites: [],
+      selectedPropertyMlsId: null,
+      setSelectedProperty: jest.fn(),
+      onToggleFavorite: jest.fn(),
+      mapVisible: true,
+      scrollToProperty: jest.fn(),
+    };
+
+    const { getByText } = render(<PropertyList {...mockProps} />);
+
+    const noResultsMessage = getByText('No results found');
+    expect(noResultsMessage).toBeInTheDocument();
+  });  
 });
