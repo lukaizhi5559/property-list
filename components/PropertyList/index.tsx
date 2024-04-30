@@ -13,6 +13,18 @@ interface Props {
   scrollToProperty: (mlsId: number) => void;
 }
 
+/**
+ * PropertyList component for displaying a list of properties.
+ * @param {Props} props - Props for the PropertyList component.
+ * @param {boolean} [props.mapVisible=false] - Whether the map is visible or not.
+ * @param {Property[]} props.properties - Array of property objects.
+ * @param {number[]} props.favorites - Array of favorite property IDs.
+ * @param {number|null} props.selectedPropertyMlsId - MLS ID of the selected property.
+ * @param {Function} props.setSelectedProperty - Function to set selected property.
+ * @param {Function} props.onToggleFavorite - Function to toggle favorite status of a property.
+ * @param {Function} props.scrollToProperty - Function to scroll to a property.
+ * @returns {React.ReactElement} The rendered PropertyList component.
+ */
 const PropertyList: React.FC<Props> = (
   { properties, favorites, onToggleFavorite, selectedPropertyMlsId, setSelectedProperty, mapVisible, scrollToProperty }
 ) => {

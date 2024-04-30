@@ -130,7 +130,11 @@ This directory contains utility functions used throughout the project. These fun
 5. **getStateAbbreviation.tsx**: This utility function retrieves the abbreviation of a US state based on its full name.
 
 ## Additional Information
-Below are **warnings** that I didn't have the time to resolve due to time. Just an FYI to let the reviewer know I did notice them.
+- Created a custom marker for the Map Panel
+
+- Created a heart-stroke-red.svg for hover on/off state change for favorite icon
+
+- Below are **warnings** that I didn't have the time to resolve due to time. Just an FYI to let the reviewer know I did notice them.
 
 ⚠️ **Warning:** As of February 21st, 2024, google.maps.Marker is deprecated. Please use google.maps.marker.AdvancedMarkerElement instead.
 

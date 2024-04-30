@@ -7,6 +7,10 @@ import styles from './listings.module.css'; // Import CSS module for styling
 import { Property } from '../../models';
 import { debounce } from 'utils';
 
+/**
+ * Listings component for displaying property listings.
+ * @returns {React.ReactElement} The rendered Listings component.
+ */
 const Listings: React.FC = () => {
   const [favorites, setFavorites] = useState<number[]>([]);
   const [viewMode, setViewMode] = useState<'map' | 'list'>('map');

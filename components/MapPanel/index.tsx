@@ -22,6 +22,18 @@ interface Props {
   scrollToProperty: (mlsId: number) => void;
 }
 
+/**
+ * MapPanel component for displaying a map with property markers.
+ * @param {Object} props - Props for the MapPanel component.
+ * @param {Property[]} props.properties - Array of property objects.
+ * @param {number[]} props.favorites - Array of favorite property IDs.
+ * @param {Function} props.onToggleFavorite - Function to toggle favorite status of a property.
+ * @param {Function} props.onPropertyUpdate - Function to update properties based on map bounds.
+ * @param {Property|null} props.selectedProperty - Selected property object.
+ * @param {Function} props.setSelectedProperty - Function to set selected property.
+ * @param {Function} props.scrollToProperty - Function to scroll to a property.
+ * @returns {React.ReactElement|null} The rendered MapPanel component or null if Google Maps API is not loaded.
+ */
 const MapPanel: React.FC<Props> = (
   { properties, favorites, onToggleFavorite, onPropertyUpdate, selectedProperty, setSelectedProperty, scrollToProperty }
 ) => {

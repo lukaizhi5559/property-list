@@ -6,6 +6,12 @@ interface Props {
   navButton: React.JSX.Element;
 }
 
+/**
+ * Header component for the Property List app.
+ * @param {Object} props - Props for the Header component.
+ * @param {React.JSX.Element} props.navButton - Navigation button element.
+ * @returns {React.ReactElement} The rendered Header component.
+ */
 const Header: React.FC<Props> = ({ navButton }) => {
   return (
     <div className={styles.header}>
