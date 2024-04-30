@@ -1,3 +1,8 @@
+/**
+ * Extracts property data from an array of properties.
+ * @param {any[]} data - An array of property objects.
+ * @returns {any[]} The extracted property data.
+ */
 export const extractPropertyData = (data: any): any[] => {
   return !data || typeof data !== 'object' ? [] : 
     data.map((item: any) => ({

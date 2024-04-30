@@ -1,3 +1,8 @@
+/**
+ * Gets the abbreviation of a state name.
+ * @param {string} stateName - The full name of the state.
+ * @returns {string} The abbreviation of the state.
+ */
 export const getStateAbbreviation = (stateName: string | undefined | null): string | undefined => {
   const stateAbbreviation: Record<string, string> = {
     Alabama: 'AL',
